@@ -4,4 +4,6 @@ uvicorn
 pydantic
 python-dotenv
 requests
+groq
+starlette
 pydantic[email]
