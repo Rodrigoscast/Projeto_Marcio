@@ -52,7 +52,7 @@ export default function Home() {
         }
         await refreshUser();
         toast.success("Login feito com sucesso")
-        //router.push('/inicio') Leva para a página inicial após o login
+        router.push('/inicio') //Leva para a página inicial após o login
       } else {
         toast.error(data?.error || 'Usuário ou senha inválidos');
       }

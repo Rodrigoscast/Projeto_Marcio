@@ -28,8 +28,17 @@ export function AppSidebar({ permissoes }) {
       title: "Inicio",
       url: "/inicio",
       icon: FcHome,
-    }
-   
+    },
+    {
+      title: "Suporte de IA",
+      url: "/suporte",
+      icon: FcOnlineSupport,
+    },
+    {
+      title: "Detector de Fake News",
+      url: "/fake-news",
+      icon: FcNews,
+    },
   ]
 
   return (
