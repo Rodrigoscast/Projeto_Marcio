@@ -1,0 +1,72 @@
+# 🧠 Projeto Marcio
+
+## 🎯 Objetivo
+
+O Projeto Marcio é uma plataforma web desenvolvida para conscientização sobre fake news, suporte ao usuário e gestão de contas, integrando recursos de inteligência artificial, autenticação segura e arquitetura moderna.
+
+O objetivo é oferecer uma experiência intuitiva, segura e escalável, promovendo o combate à desinformação e facilitando o acesso ao suporte.
+
+## 🧰 Tecnologias Utilizadas
+
+- **Back-end:**
+  - FastAPI (Python)
+  - Supabase (autenticação e banco de dados)
+  - Uso da API do Groq console para integração com inteligência artificial
+- **Front-end:**
+  - Next.js (React)
+  - TailwindCSS
+- **Banco de Dados:**
+  - Supabase (PostgreSQL)
+- **Criptografia & Autenticação:**
+  - JWT para autenticação segura e proteção de rotas
+- **Inteligência Artificial:**
+  - Uso de Chat-GPT e Copilot para auxílo de código
+- **Arquitetura da Aplicação:**
+  - Separação entre frontend (Next.js) e backend (FastAPI)
+  - Comunicação via API REST
+  - Autenticação baseada em JWT
+  - Integração com Supabase para dados e autenticação
+
+## 🏗️ Estrutura do Projeto
+
+```
+Projeto-Marcio/
+├── backend/                  # API REST com FastAPI, rotas, autenticação, IA
+├── frontend/                 # Interface web com Next.js
+│   ├── src/
+│   │   ├── app/             # Páginas (fake news, suporte, login, dashboard)
+│   │   ├── components/      # Componentes reutilizáveis
+│   │   └── contexts/        # Contextos globais (ex: autenticação)
+└── README.md
+```
+
+# Backend
+
+Este README documenta a parte backend do Projeto Marcio, descrevendo as rotas e funcionalidades que desenvolvi pessoalmente ao longo do trabalho.
+
+## ✍️ Contribuição Pessoal
+
+Durante o desenvolvimento do backend, fiquei responsável pela implementação das principais rotas e integrações da aplicação. Minhas entregas foram:
+
+- **🔐 Rotas de Autenticação**
+    - Criação das rotas para login e registro de usuários.
+    - Implementação da lógica de validação de credenciais, geração de tokens JWT e proteção de rotas autenticadas.
+
+- **👤 Rotas de Usuário**
+    - Desenvolvimento de endpoints para buscar dados do usuário autenticado, atualizar informações e gerenciar perfis.
+    - Integração com o banco de dados para recuperação e atualização segura dos dados.
+
+- **🤖 Integração com API de IA**
+    - Implementação de rotas responsáveis por conectar a aplicação com uma API externa de Inteligência Artificial.
+    - Criação da lógica para envio de prompts e tratamento das respostas da IA.
+
+Essas rotas compõem a base da lógica do backend, garantindo autenticação segura, acesso controlado aos dados e integração inteligente com serviços externos.
+
+## 🧠 Visão Geral do Backend
+
+- **Framework:** FastAPI (Python)
+- **Banco de Dados:** Supabase (PostgreSQL)
+- **Autenticação:** JWT
+- **Integração Externa:** API de Inteligência Artificial (HTTP requests)
+
+> O frontend foi desenvolvido separadamente pela equipe, utilizando Next.js e TailwindCSS, não fazendo parte direta das minhas contribuições.
