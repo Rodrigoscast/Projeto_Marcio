@@ -9,7 +9,7 @@ from app.ia.routes import router as ia_router
 app = FastAPI()
 
 origins = [
-    "http://localhost:3030",
+    "http://localhost:3000",
     "http://localhost:8081",
 ]
 

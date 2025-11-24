@@ -60,8 +60,10 @@ export default function LandingPage() {
 
             <div className="flex items-center space-x-5 hidden md:flex">
 
-              <a
-                className="flex text-gray-600 hover:text-blue-500 cursor-pointer transition-colors duration-300">
+              <Button
+                className="flex cursor-pointer transition-colors duration-300 font-semibold"
+                onClick={() => router.push('/signUp')}
+              >
                   <svg
                     className="fill-current h-5 w-5 mr-2 mt-0.5"
                     xmlns="http://www.w3.org/2000/svg"
@@ -75,12 +77,12 @@ export default function LandingPage() {
                   </svg>
 
                 Register
-              </a>
+              </Button>
 
 
               <Button
-                className="flex text-gray-600 cursor-pointer transition-colors duration-300 font-semibold text-blue-600"
-                onClick={() => router.push('/login')}
+                className="flex cursor-pointer transition-colors duration-300 font-semibold"
+                onClick={() => router.push('/signIn')}
               >
                   <svg
                     className="fill-current h-5 w-5 mr-2 mt-0.5"

@@ -74,7 +74,7 @@ export default function Layout({ children }) {
     const validarSessao = async () => {
       const token = localStorage.getItem('token')
       if (!token) {
-        router.push('/login')
+        router.push('/signIn')
         return
       }
 
@@ -96,7 +96,7 @@ export default function Layout({ children }) {
       } catch (err) {
         toast.error('Sessão expirada. Faça login novamente.')
         localStorage.removeItem('token')
-        router.push('/login')
+        router.push('/signIn')
       }
     }
 
@@ -108,7 +108,7 @@ export default function Layout({ children }) {
 
     if(!error){
       localStorage.removeItem('token')
-      router.push('/login')
+      router.push('/signIn')
     }    
   }
 

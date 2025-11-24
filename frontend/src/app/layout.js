@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Big tech code",
-  description: "Empresa de tecnologia focada em soluções inovadoras.",
+  title: "Trabalho Marcio",
+  description: "",
 };
 
 export default function RootLayout({ children }) {
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body 
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 dark:bg-sidebar`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <UserProvider>{children}</UserProvider>
         </ThemeProvider>
       </body>
