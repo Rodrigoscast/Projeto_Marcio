@@ -1,41 +1,139 @@
 # 🧠 Projeto Marcio
+---
+
+Plataforma web focada em **conscientização sobre fake news**, **suporte ao usuário** e **gestão de contas**, construída com uma arquitetura moderna envolvendo FastAPI, Next.js, Supabase e integração com IA.
+
+---
 
 ## 🎯 Objetivo
+O **Projeto Marcio** oferece:
 
-O Projeto Marcio é uma plataforma web desenvolvida para conscientização sobre fake news, suporte ao usuário e gestão de contas, integrando recursos de inteligência artificial, autenticação segura e arquitetura moderna.
+- Análise e conscientização sobre fake news
+- Chat de suporte inteligente
+- Autenticação segura
+- Experiência rápida e escalável
 
-O objetivo é oferecer uma experiência intuitiva, segura e escalável, promovendo o combate à desinformação e facilitando o acesso ao suporte.
+---
 
 ## 🧰 Tecnologias Utilizadas
 
-- **Back-end:**
-  - FastAPI (Python)
-  - Supabase (autenticação e banco de dados)
-  - Uso da API do Groq console para integração com inteligência artificial
-- **Front-end:**
-  - Next.js (React)
-  - TailwindCSS
-- **Banco de Dados:**
-  - Supabase (PostgreSQL)
-- **Criptografia & Autenticação:**
-  - JWT para autenticação segura e proteção de rotas
-- **Inteligência Artificial:**
-  - Uso de Chat-GPT e Copilot para auxílo de código
-- **Arquitetura da Aplicação:**
-  - Separação entre frontend (Next.js) e backend (FastAPI)
-  - Comunicação via API REST
-  - Autenticação baseada em JWT
-  - Integração com Supabase para dados e autenticação
+### 🔧 Back-end
+- FastAPI (Python)
+- Supabase (PostgreSQL + Auth)
+- JWT para autenticação
+- Groq API (IA)
+
+### 🎨 Front-end
+- Next.js (React)
+- TailwindCSS
+- Axios
+
+### 🗄️ Banco de Dados
+- Supabase PostgreSQL
+
+### 🤖 Inteligência Artificial
+- Integração com Groq API e uso de ChatGPT/Copilot no desenvolvimento
+
+---
+
+## 🏛️ Arquitetura da Aplicação
+- Frontend e backend separados  
+- Comunicação via API REST  
+- Autenticação via JWT  
+- Dados e usuário gerenciados pelo Supabase
+
+---
+
+## 🧩 Diagrama da Arquitetura
+```
+                ┌──────────────────────┐
+                │       Usuário        │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │     Frontend         │
+                │      Next.js         │
+                └──────────┬───────────┘
+                           │
+                           ▼  API REST (HTTPS)
+       ┌─────────────────────────────────────────┐
+       │                 Backend                 │
+       │                 FastAPI                 │
+       └──────────┬──────────────┬──────────────┘
+                  │              │
+                  ▼              ▼
+          Autenticação      Análise IA
+                  │
+                  ▼
+      ┌──────────────────────────┐
+      │        Supabase          │
+      │  PostgreSQL + Policies   │
+      └──────────────────────────┘
+```
+
+---
 
 ## 🏗️ Estrutura do Projeto
-
 ```
 Projeto-Marcio/
-├── backend/                  # API REST com FastAPI, rotas, autenticação, IA
-├── frontend/                 # Interface web com Next.js
+├── backend/
+│   ├── app/
+│   └── Dockerfile
+├── frontend/
 │   ├── src/
-│   │   ├── app/             # Páginas (fake news, suporte, login, dashboard)
-│   │   ├── components/      # Componentes reutilizáveis
-│   │   └── contexts/        # Contextos globais (ex: autenticação)
+│   └── Dockerfile
+├── docker-compose.yml
 └── README.md
+```
+
+---
+
+# 🚀 Como Rodar o Projeto com Docker
+
+A forma oficial e recomendada de rodar o Projeto Marcio é usando Docker Compose.
+
+---
+
+## 📦 1. Pré-requisitos
+- Docker instalado
+- Docker Compose instalado
+- Arquivos .env configurados
+
+---
+
+## 🧩 2. Variáveis de ambiente
+
+### backend/.env
+```
+SUPABASE_URL=
+SUPABASE_KEY=
+JWT_SECRET=
+GROQ_API_KEY=
+```
+
+### frontend/.env.local
+```
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+
+---
+
+## ▶️ 3. Subir tudo
+```
+docker-compose up --build
+```
+
+---
+
+## ⏹ 4. Parar containers
+```
+docker-compose down
+```
+
+---
+
+## 🔄 5. Forçar rebuild
+```
+docker-compose up --build --force-recreate
 ```
