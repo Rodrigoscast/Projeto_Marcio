@@ -5,6 +5,10 @@ Plataforma web focada em **conscientização sobre fake news**, **suporte ao usu
 
 ---
 
+## 🌐 Veja o projeto hospedado [aqui](https://projetomarcio.netlify.app/)
+
+---
+
 ## 🎯 Objetivo
 O **Projeto Marcio** oferece:
 
