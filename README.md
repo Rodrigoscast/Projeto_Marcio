@@ -137,3 +137,29 @@ docker-compose down
 ```
 docker-compose up --build --force-recreate
 ```
+
+---
+
+# 📸 Prints do Sistema
+---
+
+Abaixo estão alguns prints que ilustram as principais telas e funcionalidades do Projeto Marcio, incluindo:
+Todos os prints estão localizados na pasta:
+
+📁 /Arquivos
+
+![Tela de Login](Arquivos/foto3.png)
+![Analisador](Arquivos/foto1.png)
+![Suporte](Arquivos/foto2.png)
+
+---
+
+# 🎥 Vídeo Demonstrativo
+---
+
+Um vídeo completo demonstrando o funcionamento do sistema — incluindo navegação, autenticação, análise de fake news e interação com IA — está disponível em:
+
+📁 /Arquivos
+🎬 video demonstração.mp4
+
+Esse vídeo serve como material oficial de apresentação do Projeto Marcio.
